@@ -15,4 +15,10 @@ print("\n")
 l.removeDuplicates()
 print("After removing duplicates:")
 print(l)
+
 print("\n")
+print(l)
+
+print("return kth from last element, k = 3")
+
+print(l.returnKthToLast(4))
