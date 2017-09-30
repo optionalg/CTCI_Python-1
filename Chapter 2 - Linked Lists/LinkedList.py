@@ -80,3 +80,10 @@ class LinkedList:
 				p1 = p1.next
 				count += 1
 			return p1.data
+
+	def deleteMiddleNode(self, node):
+		if node is None or node.next is None:
+			return None
+		else:
+			node.data = node.next.data
+			node.next = node.next.next
