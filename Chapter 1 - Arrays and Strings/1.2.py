@@ -1,6 +1,6 @@
 """
 Check Permutation: Given two strings,write a method to decide if one is a permutation of the
-other.
+other. 
 """
 
 def isStringPermutation(str1, str2):
