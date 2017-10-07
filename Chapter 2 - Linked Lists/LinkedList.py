@@ -89,5 +89,32 @@ class LinkedList:
             node.data = node.next.data
             node.next = node.next.next
 
+    def isLinkedListPalindrome(self):
+        dataList = []
+        if not self.head or not self.head.next:
+            return True
+        curr = self.head
+        while curr is not None:
+            dataList.append(curr.data)
+            curr = curr.next
+        return dataList == dataList[::-1]
+
+    def circularListNode(self):
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next
+            if slow is fast:
+                return slow.data
+        return None
+
+    def setNextToHead(self):
+        curr = self.head
+        while curr.next:
+            print(curr.data)
+            curr = curr.next
+        curr.next = self.head
+
     def getHead(self):
         return self.head
